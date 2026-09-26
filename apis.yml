@@ -1,23 +1,62 @@
 aid: autokz
+
 name: Autokz
-description: 'Autokz is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Autokz, operating as Aoto Technology Co., Ltd., is a heavy‑machinery enterprise based in Kazakhstan that designs, manufactures, and services drilling equipment for water‑well, geological exploration, and engineering borehole applications. The company offers a broad product line including multi‑functional top‑drive drilling rigs, crawler‑mounted rigs, wireline coring rigs, and specialized drilling solutions for mining, energy, water‑conservation and municipal engineering projects worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/autokz/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Heavy Machinery
+- Drilling Equipment
+- Kazakhstan
+- Industrial Engineering
+- Water Well
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/autokz-llms.txt
+- type: Hosts
+  url: hosts/autokz-hosts.yml
+- type: Newsroom
+  url: https://www.autokz.com/news/shenbuyufuzadicengzuantanjishuzhengchengweixingyehexinjingzhengli/duancezhinengyuxinxingtongxinjishuqudongchanpingexin.html
+- type: DomainSecurity
+  url: security/autokz-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/autokz
+  url: https://www.autokz.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable contract found at standard locations on api.autokz.com.
+  evidence:
+    - url: https://api.autokz.com/openapi.json
+      status: 000
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
